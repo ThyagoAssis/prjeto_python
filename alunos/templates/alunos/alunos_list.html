@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <title>TuxSchool</title>
+</head>
+<body>
+
+
+        <header>
+            <!-- Como um link -->
+            <nav class="navbar navbar-dark bg-dark">
+              <a class="navbar-brand container" href="#">TuxSchool</a>
+            </nav>
+        </header>
+
+        <main class="container mt-5">
+            <div class="row">
+                <div class="col-11">
+                    <h1>Alunos Cadastrados</h1>
+                </div>
+                <div class="col-1">
+                    <a href="" class="btn btn-primary btn-sm">Cadastrar</a>
+                </div>
+            </div>
+
+            <div>
+                <table class="table mt-2 text-center">
+                  <thead>
+                    <tr>
+                      <th scope="col">id:</th>
+                      <th scope="col">Nome: </th>
+                      <th scope="col">Curso</th>
+                      <th scope="col">Turma</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  {% for aluno in alunos_list %}
+                    <tr>
+                      <th scope="row">{{aluno.id}}</th>
+                      <td>{{aluno.nome}}</td>
+                      <td>{{aluno.curso}}</td>
+                      <td>{{aluno.turma}}</td>
+                        <td>
+                            <button type="button" class="btn btn-primary btn-sm">Edição</button>
+                            <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+                        </td>
+                    </tr>
+                  {% endfor %}
+                  </tbody>
+                </table>
+            </div>
+        </main>
+
+
+</body>
+</html>
