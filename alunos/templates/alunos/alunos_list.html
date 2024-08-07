@@ -13,7 +13,7 @@
         <header>
             <!-- Como um link -->
             <nav class="navbar navbar-dark bg-dark">
-              <a class="navbar-brand container" href="#">TuxSchool</a>
+              <a class="navbar-brand container" href="{% url 'alunos_list'%}">TuxSchool</a>
             </nav>
         </header>
 
@@ -23,7 +23,7 @@
                     <h1>Alunos Cadastrados</h1>
                 </div>
                 <div class="col-1">
-                    <a href="" class="btn btn-primary btn-sm">Cadastrar</a>
+                    <a href="{% url 'alunos_create'%}" class="btn btn-primary btn-sm">Cadastrar</a>
                 </div>
             </div>
 

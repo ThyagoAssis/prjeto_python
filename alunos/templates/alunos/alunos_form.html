@@ -1,8 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     {% load bootstrap5 %}
+    {% load crispy_forms_tags %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
     <title>TuxSchool</title>
@@ -21,14 +24,10 @@
             <h1>Cadastrar novo Aluno:</h1>
 
             <form method="post">
-                <!---Inserir para evitar atques de crf--->
                 {% csrf_token %}
-                 {{form}}
-            <button type="submit">Enviar</button>
-
+                {{ form|crispy }}
+                <button type="submit" class="btn btn-primary btn-sm">Enviar</button>
             </form>
-
-
         </main>
 
 </body>

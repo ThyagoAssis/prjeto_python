@@ -23,6 +23,6 @@ class AlunosCreateView(CreateView):
 
     # Redireciona caso aja sucesso
     # Precisa deficnir o name  na url
-    # fAZEMOS REFERENCIA ATRAVES DONAME
+    # fAZEMOS REFERENCIA ATRAVES DO NAME
     success_url = reverse_lazy('alunos_list')
 
