@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    {% load bootstrap5 %}
-    {% bootstrap_css %}
-    {% bootstrap_javascript %}
-    <title>TuxSchool</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-
-        <header>
-            <!-- Como um link -->
-            <nav class="navbar navbar-dark bg-dark">
-              <a class="navbar-brand container" href="{% url 'alunos_list'%}">TuxSchool</a>
-            </nav>
-        </header>
-
-        <main class="container mt-5">
-            <div class="row">
+{% block content %}
+    <div class="row">
                 <div class="col-11">
                     <h1>Alunos Cadastrados</h1>
                 </div>
@@ -54,8 +37,5 @@
                   </tbody>
                 </table>
             </div>
-        </main>
+{% endblock content %}
 
-
-</body>
-</html>

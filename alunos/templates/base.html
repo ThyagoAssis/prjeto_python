@@ -1,0 +1,24 @@
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>TuxSchool</title>
+</head>
+<body>
+        <header>
+            <!-- Como um link -->
+            <nav class="navbar navbar-dark bg-dark">
+              <a class="navbar-brand container" href="{% url 'alunos_list'%}">TuxSchool</a>
+            </nav>
+        </header>
+        <main class="container mt-5">
+            {% block content %}{% endblock content %}
+        </main>
+
+
+</body>
+</html>
